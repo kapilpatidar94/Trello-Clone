@@ -20,6 +20,10 @@ body{
     flex-direction: row;
     overflow: auto;
     overflow-y: hidden;
+    
+}
+.checklist-box{
+    margin: 4px;
 }
 
 .inner-div-class{
@@ -106,7 +110,7 @@ li:hover{
     width: 80%;
   }
   
-  .items-checklist{
+  .items-checklist, .add-new-checklist{
     display:flex;
     flex-direction: row;
     font-weight: normal;
@@ -129,8 +133,9 @@ li:hover{
       font-weight: bold;
   }
   .checklist-box{
-      border: 2px solid black;
+      border: 1px solid gray;
       font-weight: bold;
+      border-radius: 6px;
   }
   .checklist-box::before{
     content: '☑';
@@ -145,10 +150,16 @@ li:hover{
   .delete-checklist-button{
       position: relative;
       float: right;
-      background-color: white;
+      background-color: rgb(224, 92, 92);
       border-radius: 6px;
+      font-weight: bold;
   }
   .delete-checklist-button:hover{
     cursor: pointer;
     background-color: lightgray;
+  }
+
+  .add-new-checklist{
+      background-color: lightgreen;
+      font-weight: bold;
   }
