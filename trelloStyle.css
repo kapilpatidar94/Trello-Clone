@@ -1,30 +1,30 @@
 header{
     display: flex;
     justify-content: center;
-    background-color: rgb(10, 83, 126);
-    
+    background-color: transparent;    
     font-size: 24px;
-    color: beige;    
+    color: beige;
+    height: 32px;   
+    opacity: 0.8;
+ 
 }
 body{
-    background-color: #0079BF;
-    /* background-size: cover; */
+     background-size: cover; 
     height: 97.5vh;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif; 
 }
-header{
-    opacity: 0.8;
-}
+
 
 #browser-div{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    overflow-x: auto;
+    overflow: auto;
     overflow-y: hidden;
 }
 
 .inner-div-class{
+    
+    justify-content: space-around;
     background-color: rgb(230, 233, 233);
     width: 25%;
     height: 100%;
@@ -34,6 +34,8 @@ header{
     overflow-y: scroll;
     max-height: 80vh;
     border-radius: 8px;
+    margin: 0 5px;
+    
 }
 
 li{
@@ -65,14 +67,88 @@ li:hover{
     float: right;
     background-color: white;
     color: green;
-    /* font-weight: bold; */
+    align-items: center;
 }
 #add-card{
     opacity: 0.7;
-    border: none;    
+    border: none;
+    position: relative;    
 }
 #add-list{
     max-height: 12vh;
     padding: 20px 20px;
     opacity: 0.7;
 }
+
+
+.checklist-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    max-height: 80vh;
+    
+  }
+
+  .checklist-popup-content {
+    background-color: #fefefe;
+    color:black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .items-checklist{
+    display:flex;
+    flex-direction: row;
+    font-weight: normal;
+    list-style-type: none;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 6px 8px 2px;
+    position: relative;
+    z-index: 10;
+    margin: 8px 4px;
+    background-color: white;
+    border-radius: 6px;
+  }
+  .items-checklist:hover{
+    cursor: pointer;
+    background-color: lightgray;
+  }
+ 
+  .des-card-head, .card-header{
+      font-weight: bold;
+  }
+  .checklist-box{
+      border: 2px solid black;
+      font-weight: bold;
+  }
+  .checklist-box::before{
+    content: '☑';
+    font-weight: bold;
+  }
+  .des-card-head::before{
+      content: '☴ ';
+      font-weight: bold;
+  }
+ 
+
+  .delete-checklist-button{
+      position: relative;
+      float: right;
+      background-color: white;
+      border-radius: 6px;
+  }
+  .delete-checklist-button:hover{
+    cursor: pointer;
+    background-color: lightgray;
+  }
